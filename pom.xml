@@ -68,6 +68,13 @@
   			<artifactId>maven-jar-plugin</artifactId>
   			<version>2.4</version>
   			<configuration>
+  				<excludes>
+  					<exclude>*.xml</exclude>
+  					<exclude>jdbc.properties</exclude>
+  					<exclude>jdbc_template.properties</exclude>
+  				</excludes>
+  			</configuration>
+  			<!-- <configuration>
   				<archive>
   					<manifest>
   						<addClasspath>true</addClasspath>
@@ -75,7 +82,7 @@
   						<mainClass>org.springframework.batch.core.launch.support.CommandLineJobRunner</mainClass>
   					</manifest>
   				</archive>
-  			</configuration>
+  			</configuration> -->
   		</plugin>
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
